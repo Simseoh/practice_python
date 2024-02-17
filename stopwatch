@@ -1,0 +1,19 @@
+import time
+
+i = 0
+
+print('if you want to stop this code, press .')
+
+while i >= False:
+    t = time.localtime(time.time())
+    localtime = time.asctime(t)
+    str = '현재시각: ' + time.asctime(t)
+    print(str)
+    i += 1
+
+    time.sleep(1)
+'''
+    stop = input()
+    if stop == '.':
+        break
+'''
