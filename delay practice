@@ -10,10 +10,10 @@ if start == "":
   time.sleep(1.5)
   i = int(i)
   for i in range(101):
-  print(i,'%')
-  i += 1
-  time.sleep(0.5)
-  if i == 101:
-    time.sleep(1)
-    print('loading completed')
-    break
+    print(i,'%')
+    i += 1
+    time.sleep(0.5)
+    if i == 101:
+        time.sleep(1)
+        print('loading completed')
+        break
