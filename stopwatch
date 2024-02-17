@@ -12,8 +12,3 @@ while i >= False:
     i += 1
 
     time.sleep(1)
-'''
-    stop = input()
-    if stop == '.':
-        break
-'''
