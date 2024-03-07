@@ -1,0 +1,22 @@
+from datetime import datetime
+import time
+
+now_year = datetime.now().year
+now_month = datetime.now().month
+now_date = datetime.now().day
+now_hour = datetime.now().hour
+now_minute = datetime.now().minute
+now_second = datetime.now().second
+i = 1
+num = 0
+while i == True:
+    num += 1
+    print('---------------------------------------------time---------------------------------------------')
+    print(num, now_year, '년', now_month, '월', now_date, '일', now_hour, '시', now_minute, '분', now_second, '초')
+    now_year = datetime.now().year
+    now_month = datetime.now().month
+    now_date = datetime.now().day
+    now_hour = datetime.now().hour
+    now_minute = datetime.now().minute
+    now_second = datetime.now().second
+    time.sleep(1)
