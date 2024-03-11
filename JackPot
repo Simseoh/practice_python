@@ -1,0 +1,59 @@
+i = 1
+a = 0
+i_1 = 0
+i_2 = 0
+play = 1
+replay = 0
+now_money = 100
+repl_check = 1
+all_reset = 0
+import time
+import random
+bet_money = 0
+while play == True:
+    i_1 = 0
+    while i == True:
+        print('your pocket:',now_money)
+        bet_money = int(input('bet money:'))
+        if bet_money == '':
+            bet_money = 0
+            print('enter bet money')
+        elif bet_money > now_money:
+            print('you don\'t have enough money')
+        else:
+            now_money -= bet_money
+            break
+
+    a = input('press enter to start')
+    if a == '':
+       while i_1 <= 100:
+        a_1 = (int(random.randrange(1,10)))
+        a_2 = (int(random.randrange(1,10)))
+        a_3 = (int(random.randrange(1,10)))
+        print('|',a_1,'|',a_2,'|',a_3,'|')
+        i_1 += 1
+        time.sleep(0.01)
+    
+    f_3 = a_3
+    f_2 = a_2
+    f_1 = a_1
+    if f_1 == f_2 == f_3:
+            print('congratulation!', bet_money * 11 - bet_money)
+            now_money += bet_money * 10
+    elif f_1 == f_2 or f_2 == f_3 or f_3 == f_1:
+        print('double', bet_money * 3 - bet_money)
+        now_money += bet_money * 2
+    else:
+        print('you lose:D -',bet_money)
+    print('now you have',now_money)
+    while repl_check == True:
+        if now_money == 0:
+            all_reset = input('reset?(press enter)')
+            if all_reset == '':
+                print('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
+                now_money = 100
+                break
+        else:
+            replay = input('press enter to next game')
+            if replay == '':
+                break
