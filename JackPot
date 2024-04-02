@@ -9,6 +9,7 @@ repl_check = 1
 all_reset = 0
 import time
 import random
+import os
 bet_money = 0
 while play == True:
     i_1 = 0
@@ -50,7 +51,7 @@ while play == True:
         if now_money == 0:
             all_reset = input('reset?(press enter)')
             if all_reset == '':
-                print('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
+                os.system('clear')
                 now_money = 100
                 break
         else:
